@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import MemoryGame from './MemoryGame';
+import MemoryGame from './components/MemoryGame';
 import './index.css';
 
 let pokemonList = [
