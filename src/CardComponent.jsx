@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 
-//make a function to handle the fetch request, we dont need to use effects
 export default function CardComponent({ name, onSelection }) {
   const [imgSrc, setImgSrc] = useState('');
 
   useEffect(() => {
+    let ignore = false;
     fetch('https://pokeapi.co/api/v2/pokemon/' + name, {
       mode: 'cors',
     })
@@ -13,12 +13,16 @@ export default function CardComponent({ name, onSelection }) {
         return response.json();
       })
       .then(function fulfilled(response) {
-        console.log('this should be called 4 times and only 4 times.');
-        setImgSrc(response.sprites.front_default);
+        console.log('this should be called 24 times');
+        if (!ignore) setImgSrc(response.sprites.front_default);
       })
       .catch(function (error) {
         console.log(error);
       });
+
+    return () => {
+      ignore = true;
+    };
   }, [name]);
 
   return (
