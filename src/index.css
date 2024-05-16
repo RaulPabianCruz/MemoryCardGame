@@ -1,6 +1,19 @@
+html, body, div,
+h1, h2, h3, h4, p,
+form, label
+ {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
+  font-size: 20px;
   font-weight: 400;
 
   color-scheme: light dark;
@@ -26,8 +39,15 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
+  justify-content: center;
   min-width: 320px;
   min-height: 100vh;
+}
+
+#root {
+  padding: 30px;
+  width: 950px;
+  min-width: 500px;
 }
 
 h1 {

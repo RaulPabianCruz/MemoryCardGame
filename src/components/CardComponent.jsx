@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import '../styles/card.css';
 
 export default function CardComponent({ name, onSelection }) {
   const [imgSrc, setImgSrc] = useState('');
@@ -27,8 +28,8 @@ export default function CardComponent({ name, onSelection }) {
 
   return (
     <div className="card" onClick={() => onSelection(name)}>
-      <img src={imgSrc} alt={'Sprite image of ' + name} />
-      <p>{name.charAt(0).toUpperCase() + name.slice(1)}</p>
+      <img className="sprite" src={imgSrc} alt={'Sprite image of ' + name} />
+      <p className="name">{name.charAt(0).toUpperCase() + name.slice(1)}</p>
     </div>
   );
 }

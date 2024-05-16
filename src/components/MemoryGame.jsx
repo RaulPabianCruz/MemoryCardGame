@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import CardComponent from './CardComponent';
+import '../styles/memoryGame.css';
 
 function shuffleCards(oldArray) {
   let newArray = [...oldArray];
