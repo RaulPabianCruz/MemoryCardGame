@@ -1,0 +1,39 @@
+.memory-game.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.memory-game.header-section {
+    width: 900px;
+    max-width: 950px;
+    min-width: 500px;
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.header-section > .desc-section,
+.header-section > .score-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-section > .desc-section {
+    text-align: left;
+}
+
+.header-section > .score-section {
+    text-align: right;
+    margin-left: auto;
+    justify-content: center;
+}
+
+.memory-game > .card-section {
+    width: 900px;
+    max-width: 950px;
+    min-width: 500px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
