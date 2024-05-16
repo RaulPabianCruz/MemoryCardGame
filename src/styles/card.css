@@ -1,0 +1,31 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 15px;
+    border: 1px solid rgba(0, 0, 0);
+    border-radius: 15px;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.4);
+    background-color: peachpuff;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card > .sprite {
+    width: 100%;
+    max-width: 200px;
+    max-height: 200px;
+    min-width: 96px;
+    min-height: 96px;
+    background-color: white;
+}
+
+.card > .name {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 20px 0px;
+}
